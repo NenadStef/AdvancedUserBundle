@@ -43,6 +43,7 @@ class Configuration implements ConfigurationInterface
                     ->isRequired()
                     ->cannotBeEmpty()
                 ->end()
+            ->end()
         ;
 
         return $treeBuilder;
