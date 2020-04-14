@@ -6,6 +6,7 @@ use JsonException;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
 use function json_encode;
+use function method_exists;
 
 /**
  * Class Configuration
@@ -23,7 +24,13 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder('advanced_user');
-        $rootNode = $treeBuilder->getRootNode();
+        //$rootNode = $treeBuilder->getRootNode();
+
+        if (method_exists($treeBuilder, 'getRootNode')) {
+            $rootNode = $treeBuilder->getRootNode();
+        } else {
+            $rootNode = $treeBuilder->root('advanced_user');
+        }
 
         $rootNode
             ->children()
