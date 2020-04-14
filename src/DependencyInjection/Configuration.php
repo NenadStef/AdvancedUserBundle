@@ -26,12 +26,6 @@ class Configuration implements ConfigurationInterface
         $treeBuilder = new TreeBuilder('advanced_user');
         $rootNode = $treeBuilder->getRootNode();
 
-//        if (method_exists($treeBuilder, 'getRootNode')) {
-//            $rootNode = $treeBuilder->getRootNode();
-//        } else {
-//            $rootNode = $treeBuilder->root('advanced_user');
-//        }
-
         $rootNode
             ->children()
                 ->scalarNode('db_driver')
@@ -44,7 +38,7 @@ class Configuration implements ConfigurationInterface
                     ->cannotBeEmpty()
                 ->end()
             ->end()
-        ;
+        ->end();
 
         return $treeBuilder;
     }
