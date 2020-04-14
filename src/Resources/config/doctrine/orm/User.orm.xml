@@ -4,7 +4,7 @@
                   xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
                   http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
 
-    <mapped-superclass name="NenadStef\AdvancedUserBundle\Entity\User">
+    <mapped-superclass name="Advanced\UserBundle\Entity\User">
 
         <field name="userName" column="user_name" type="string" length="128" />
 

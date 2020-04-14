@@ -1,7 +1,7 @@
 <?php /** @noinspection ReturnFalseInspection */
 declare(strict_types=1);
 
-namespace NenadStef\AdvancedUserBundle;
+namespace Advanced\UserBundle;
 
 use Doctrine\Bundle\DoctrineBundle\DependencyInjection\Compiler\DoctrineOrmMappingsPass;
 use Doctrine\Bundle\MongoDBBundle\DependencyInjection\Compiler\DoctrineMongoDBMappingsPass;
@@ -12,7 +12,7 @@ use function realpath;
 
 /**
  * Class AdvancedUserBundle
- * @package NenadStef\AdvancedUserBundle
+ * @package Advanced\UserBundle
  */
 class AdvancedUserBundle extends Bundle
 {

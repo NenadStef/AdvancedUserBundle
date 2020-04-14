@@ -1,12 +1,12 @@
 <?php declare(strict_types=1);
 
-namespace NenadStef\AdvancedUserBundle\Entity;
+namespace Advanced\UserBundle\Entity;
 
 use DateTime;
 
 /**
  * Class User
- * @package NenadStef\AdvancedUserBundle\Entity
+ * @package Advanced\UserBundle\Entity
  */
 abstract class User
 {

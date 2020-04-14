@@ -44,12 +44,13 @@
             "dev-master": "1.0.x-dev"
         },
         "symfony": {
-            "id": "01E5X3J2Z6ZZQV950F747BJ109"
+            "id": "01E5X3J2Z6ZZQV950F747BJ109",
+            "allow-contrib": false
         }
     },
     "autoload": {
         "psr-4": {
-            "NenadStef\\AdvancedUserBundle\\": "src/"
+            "Advanced\\UserBundle\\": "src/"
         },
         "exclude-from-classmap": [
             "/Tests/"
@@ -57,7 +58,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "NenadStef\\AdvancedUserBundle\\Tests\\": "tests/"
+            "Advanced\\UserBundle\\Tests\\": "tests/"
         }
     }
 }

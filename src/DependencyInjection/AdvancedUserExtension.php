@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace NenadStef\AdvancedUserBundle\DependencyInjection;
+namespace Advanced\UserBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Processor;
 use Symfony\Component\Config\FileLocator;
@@ -12,7 +12,7 @@ use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
 
 /**
  * Class AdvancedUserExtension
- * @package NenadStef\AdvancedUserBundle\DependencyInjection
+ * @package Advanced\UserBundle\DependencyInjection
  */
 class AdvancedUserExtension extends Extension
 {

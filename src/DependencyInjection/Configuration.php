@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace NenadStef\AdvancedUserBundle\DependencyInjection;
+namespace Advanced\UserBundle\DependencyInjection;
 
 use JsonException;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
@@ -10,7 +10,7 @@ use function method_exists;
 
 /**
  * Class Configuration
- * @package NenadStef\AdvancedUserBundle\DependencyInjection
+ * @package Advanced\UserBundle\DependencyInjection
  */
 class Configuration implements ConfigurationInterface
 {
