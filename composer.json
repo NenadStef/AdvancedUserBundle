@@ -13,6 +13,7 @@
             "email": "stefanovic21@sbb.rs"
         }
     ],
+    "version": "1.0.0",
     "require": {
         "php": "^7.4",
         "ext-json": "*",
@@ -68,9 +69,6 @@
     "extra": {
         "symfony": {
             "allow-contrib": false
-        },
-        "branch-alias": {
-            "dev-master": "1.0.x-dev"
         }
     }
 }
