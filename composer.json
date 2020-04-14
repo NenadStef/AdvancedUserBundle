@@ -42,6 +42,9 @@
     "extra": {
         "branch-alias": {
             "dev-master": "1.0.x-dev"
+        },
+        "symfony": {
+            "id": "01E5X3J2Z6ZZQV950F747BJ109"
         }
     },
     "autoload": {
