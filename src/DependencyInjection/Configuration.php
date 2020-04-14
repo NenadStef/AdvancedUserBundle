@@ -18,19 +18,19 @@ class Configuration implements ConfigurationInterface
     private static array $supportedDrivers = ['orm', 'mongodb', 'custom'];
 
     /**
-     * @return TreeBuilder|void
+     * @return TreeBuilder
      * @throws JsonException
      */
-    public function getConfigTreeBuilder()
+    public function getConfigTreeBuilder(): TreeBuilder
     {
         $treeBuilder = new TreeBuilder('advanced_user');
-        //$rootNode = $treeBuilder->getRootNode();
+        $rootNode = $treeBuilder->getRootNode();
 
-        if (method_exists($treeBuilder, 'getRootNode')) {
-            $rootNode = $treeBuilder->getRootNode();
-        } else {
-            $rootNode = $treeBuilder->root('advanced_user');
-        }
+//        if (method_exists($treeBuilder, 'getRootNode')) {
+//            $rootNode = $treeBuilder->getRootNode();
+//        } else {
+//            $rootNode = $treeBuilder->root('advanced_user');
+//        }
 
         $rootNode
             ->children()
@@ -44,5 +44,7 @@ class Configuration implements ConfigurationInterface
                     ->cannotBeEmpty()
                 ->end()
         ;
+
+        return $treeBuilder;
     }
 }
