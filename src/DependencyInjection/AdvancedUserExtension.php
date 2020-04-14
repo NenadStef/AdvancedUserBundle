@@ -41,7 +41,7 @@ class AdvancedUserExtension extends Extension
             if (isset(self::$doctrineDrivers[$config['db_driver']]))
             {
                 $loader->load('doctrine.xml');
-                $container->setAlias('advanced_user.doctrine_registry'. new Alias(self::$doctrineDrivers[$config['db_driver']]['registry']), false);
+                $container->setAlias('advanced_user.doctrine_registry', new Alias(self::$doctrineDrivers[$config['db_driver']]['registry'], false));
             } else {
                 $loader->load(sprintf('%s.xml', $config['db_driver']));
             }

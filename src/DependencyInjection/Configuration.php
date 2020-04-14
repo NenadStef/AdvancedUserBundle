@@ -38,7 +38,7 @@ class Configuration implements ConfigurationInterface
                     ->cannotBeEmpty()
                 ->end()
             ->end()
-        ->end();
+        ;
 
         return $treeBuilder;
     }
