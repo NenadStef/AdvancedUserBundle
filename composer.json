@@ -2,10 +2,8 @@
     "name": "nenadstef/advanced-user-bundle",
     "type": "symfony-bundle",
     "description": "NenadStef's Symfony AdvancedUserBundle",
-    "keywords": [
-        "User management"
-    ],
-    "homepage": "https://github.com/NenadStef",
+    "keywords": [ "User management" ],
+    "homepage": "https://github.com/NenadStef/AdvancedUserBundle",
     "license": "MIT",
     "authors": [
         {
@@ -42,6 +40,11 @@
     "config": {
         "sort-packages": true
     },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    },
     "autoload": {
         "psr-4": {
             "NenadStef\\AdvancedUserBundle\\": "src/"
@@ -53,11 +56,6 @@
     "autoload-dev": {
         "psr-4": {
             "NenadStef\\AdvancedUserBundle\\Tests\\": "tests/"
-        }
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "1.0.x-dev"
         }
     }
 }
