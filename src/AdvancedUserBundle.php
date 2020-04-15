@@ -36,13 +36,13 @@ class AdvancedUserBundle extends Bundle
     {
         if (class_exists(DoctrineOrmMappingsPass::class))
         {
-            $mappings = array(realpath(__DIR__ . self::DOCTRINE_MAPPING_LOCATION . 'orm') => 'NenadStef\AdvancedUserBundle\Entity');
+            $mappings = array(realpath(__DIR__ . self::DOCTRINE_MAPPING_LOCATION . 'orm') => 'Advanced\UserBundle\Entity');
             $container->addCompilerPass(DoctrineOrmMappingsPass::createXmlMappingDriver($mappings, ['advanced_user.model_manager_name'], 'advanced_user.backend_type_orm'));
         }
 
         if (class_exists(DoctrineMongoDBMappingsPass::class))
         {
-            $mappings = array(realpath(__DIR__ . self::DOCTRINE_MAPPING_LOCATION . 'odm') => 'NenadStef\AdvancedUserBundle\Document');
+            $mappings = array(realpath(__DIR__ . self::DOCTRINE_MAPPING_LOCATION . 'odm') => 'Advanced\UserBundle\Document');
             $container->addCompilerPass(DoctrineMongoDBMappingsPass::createXmlMappingDriver($mappings, ['advanced_user.model_manager_name'], 'advanced_user.backend_type_mongodb'));
         }
     }
