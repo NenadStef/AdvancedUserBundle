@@ -2,13 +2,13 @@
 
 namespace Advanced\UserBundle\Entity;
 
-use Advanced\UserBundle\Model\User\User as UserModel;
+use Advanced\UserBundle\Model\Group\Group as GroupModel;
 
 /**
- * Class User
+ * Class Group
  * @package Advanced\UserBundle\Entity
  */
-abstract class User extends UserModel
+abstract class Group extends GroupModel
 {
 
 }

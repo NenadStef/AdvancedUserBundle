@@ -53,5 +53,15 @@ class AdvancedUserExtension extends Extension
             $definition = $container->getDefinition('advanced_user.object_manager');
             $definition->setFactory(array(new Reference('advanced_user.doctrine_registry'), 'getManager'));
         }
+
+        if (isset($config['table_options']['charset']))
+        {
+            $container->setParameter('advanced_user.table_options.charset', $config['table_options']['charset']);
+        }
+
+        if (isset($config['table_options']['collate']))
+        {
+            $container->setParameter('advanced_user.table_options.collate', $config['table_options']['collate']);
+        }
     }
 }

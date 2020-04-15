@@ -1,4 +1,7 @@
-<?php declare(strict_types=1);
+<?php
+/** @noinspection PhpUndefinedClassInspection */
+/** @noinspection NullPointerExceptionInspection */
+declare(strict_types=1);
 
 namespace Advanced\UserBundle\DependencyInjection;
 
@@ -42,6 +45,12 @@ class Configuration implements ConfigurationInterface
                     ->cannotBeOverwritten()
                     ->isRequired()
                     ->cannotBeEmpty()
+                ->end()
+                ->arrayNode('table_options')
+                    ->children()
+                        ->scalarNode('charset')->defaultValue('utf8mb4')->end()
+                        ->scalarNode('collate')->defaultValue('utf8mb4_unicode_ci')->end()
+                    ->end()
                 ->end()
             ->end()
         ;

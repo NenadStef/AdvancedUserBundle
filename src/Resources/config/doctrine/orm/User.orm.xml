@@ -6,25 +6,74 @@
 
     <mapped-superclass name="Advanced\UserBundle\Entity\User">
 
-        <field name="userName" column="user_name" type="string" length="128" />
+        <field name="userName" column="user_name" length="256" unique="true" >
+            <options>
+                <option name="charset">%advanced_user.table_options.charset%</option>
+                <option name="collation">%advanced_user.table_options.collation%</option>
+            </options>
+        </field>
 
-        <field name="userNameCanonical" column="user_name_canonical" type="string" length="128" unique="true" />
+        <field name="userNameCanonical" column="user_name_canonical" length="256" unique="true" >
+            <options>
+                <option name="charset">%advanced_user.table_options.charset%</option>
+                <option name="collation">%advanced_user.table_options.collation%</option>
+            </options>
+        </field>
 
-        <field name="email" column="email" type="string" length="128" />
+        <field name="email" column="email" length="256" unique="true" >
+            <options>
+                <option name="charset">%advanced_user.table_options.charset%</option>
+                <option name="collation">%advanced_user.table_options.collation%</option>
+            </options>
+        </field>
 
-        <field name="emailCanonical" column="email_canonical" type="string" length="128" unique="true" />
+        <field name="emailCanonical" column="email_canonical" length="256" unique="true" >
+            <options>
+                <option name="charset">%advanced_user.table_options.charset%</option>
+                <option name="collation">%advanced_user.table_options.collation%</option>
+            </options>
+        </field>
 
-        <field name="enabled" column="enabled" type="boolean" />
+        <field name="salt" column="salt" length="256" nullable="true" >
+            <options>
+                <option name="charset">%advanced_user.table_options.charset%</option>
+                <option name="collation">%advanced_user.table_options.collation%</option>
+            </options>
+        </field>
 
-        <field name="salt" column="salt" type="string" length="128" nullable="true" />
+        <field name="password" column="password" length="256" unique="true" >
+            <options>
+                <option name="charset">%advanced_user.table_options.charset%</option>
+                <option name="collation">%advanced_user.table_options.collation%</option>
+            </options>
+        </field>
 
-        <field name="password" column="password" length="128" type="string" />
+        <field name="confirmationToken" column="confirmation_token" length="256" unique="true" nullable="true" >
+            <options>
+                <option name="charset">%advanced_user.table_options.charset%</option>
+                <option name="collation">%advanced_user.table_options.collation%</option>
+            </options>
+        </field>
+
+        <field name="passwordRequestedAt" column="password_requested_at" type="datetime" nullable="true" />
 
         <field name="lastLogin" column="last_login" type="datetime" nullable="true" />
 
-        <field name="confirmationToken" column="confirmation_token" type="string" length="180" unique="true" nullable="true" />
+        <field name="enabled" column="enabled" type="boolean" />
 
-        <field name="passwordRequestedAt" column="password_requested_at" type="datetime" nullable="true" />
+        <unique-constraints>
+            <unique-constraint columns="user_name" name="user_name_UNIQUE" />
+            <unique-constraint columns="user_name_canonical" name="user_name_canonical_UNIQUE" />
+            <unique-constraint columns="email" name="email_UNIQUE" />
+            <unique-constraint columns="email_canonical" name="email_canonical_UNIQUE" />
+            <unique-constraint columns="password" name="password_UNIQUE" />
+            <unique-constraint columns="confirmation_token" name="confirmation_token_UNIQUE" />
+        </unique-constraints>
+
+        <options>
+            <option name="charset">%advanced_user.table_options.charset%</option>
+            <option name="collation">%advanced_user.table_options.collation%</option>
+        </options>
 
     </mapped-superclass>
 
