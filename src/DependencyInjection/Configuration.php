@@ -46,12 +46,12 @@ class Configuration implements ConfigurationInterface
                     ->isRequired()
                     ->cannotBeEmpty()
                 ->end()
-                ->arrayNode('table_options')
-                    ->children()
-                        ->scalarNode('charset')->defaultValue('utf8mb4')->end()
-                        ->scalarNode('collate')->defaultValue('utf8mb4_unicode_ci')->end()
-                    ->end()
-                ->end()
+//                ->arrayNode('table_options')
+//                    ->children()
+//                        ->scalarNode('charset')->defaultValue('utf8mb4')->end()
+//                        ->scalarNode('collate')->defaultValue('utf8mb4_unicode_ci')->end()
+//                    ->end()
+//                ->end()
             ->end()
         ;
 

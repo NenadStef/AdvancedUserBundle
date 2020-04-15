@@ -8,50 +8,50 @@
 
         <field name="userName" column="user_name" length="256" unique="true" >
             <options>
-                <option name="charset">%advanced_user.table_options.charset%</option>
-                <option name="collation">%advanced_user.table_options.collation%</option>
+                <option name="charset">utf8mb4</option>
+                <option name="collation">utf8mb4_unicode_ci</option>
             </options>
         </field>
 
         <field name="userNameCanonical" column="user_name_canonical" length="256" unique="true" >
             <options>
-                <option name="charset">%advanced_user.table_options.charset%</option>
-                <option name="collation">%advanced_user.table_options.collation%</option>
+                <option name="charset">utf8mb4</option>
+                <option name="collation">utf8mb4_unicode_ci</option>
             </options>
         </field>
 
         <field name="email" column="email" length="256" unique="true" >
             <options>
-                <option name="charset">%advanced_user.table_options.charset%</option>
-                <option name="collation">%advanced_user.table_options.collation%</option>
+                <option name="charset">utf8mb4</option>
+                <option name="collation">utf8mb4_unicode_ci</option>
             </options>
         </field>
 
         <field name="emailCanonical" column="email_canonical" length="256" unique="true" >
             <options>
-                <option name="charset">%advanced_user.table_options.charset%</option>
-                <option name="collation">%advanced_user.table_options.collation%</option>
+                <option name="charset">utf8mb4</option>
+                <option name="collation">utf8mb4_unicode_ci</option>
             </options>
         </field>
 
         <field name="salt" column="salt" length="256" nullable="true" >
             <options>
-                <option name="charset">%advanced_user.table_options.charset%</option>
-                <option name="collation">%advanced_user.table_options.collation%</option>
+                <option name="charset">utf8mb4</option>
+                <option name="collation">utf8mb4_unicode_ci</option>
             </options>
         </field>
 
         <field name="password" column="password" length="256" unique="true" >
             <options>
-                <option name="charset">%advanced_user.table_options.charset%</option>
-                <option name="collation">%advanced_user.table_options.collation%</option>
+                <option name="charset">utf8mb4</option>
+                <option name="collation">utf8mb4_unicode_ci</option>
             </options>
         </field>
 
         <field name="confirmationToken" column="confirmation_token" length="256" unique="true" nullable="true" >
             <options>
-                <option name="charset">%advanced_user.table_options.charset%</option>
-                <option name="collation">%advanced_user.table_options.collation%</option>
+                <option name="charset">utf8mb4</option>
+                <option name="collation">utf8mb4_unicode_ci</option>
             </options>
         </field>
 
@@ -71,8 +71,8 @@
         </unique-constraints>
 
         <options>
-            <option name="charset">%advanced_user.table_options.charset%</option>
-            <option name="collation">%advanced_user.table_options.collation%</option>
+            <option name="charset">utf8mb4</option>
+            <option name="collation">utf8mb4_unicode_ci</option>
         </options>
 
     </mapped-superclass>

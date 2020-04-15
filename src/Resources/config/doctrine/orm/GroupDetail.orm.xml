@@ -8,8 +8,8 @@
 
         <field name="name" column="name" length="256" unique="true" >
             <options>
-                <option name="charset">%advanced_user.table_options.charset%</option>
-                <option name="collation">%advanced_user.table_options.collation%</option>
+                <option name="charset">utf8mb4</option>
+                <option name="collation">utf8mb4_unicode_ci</option>
             </options>
         </field>
 
@@ -26,8 +26,8 @@
         </unique-constraints>
 
         <options>
-            <option name="charset">%advanced_user.table_options.charset%</option>
-            <option name="collation">%advanced_user.table_options.collation%</option>
+            <option name="charset">utf8mb4</option>
+            <option name="collation">utf8mb4_unicode_ci</option>
         </options>
 
     </mapped-superclass>
