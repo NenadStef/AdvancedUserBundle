@@ -91,8 +91,8 @@ class Configuration implements ConfigurationInterface
     {
         $nodeDefinition
             ->children()
-                ->addDefaultsIfNotSet()
-                ->canBeUnset()
+//                ->addDefaultsIfNotSet()
+//                ->canBeUnset()
                 ->scalarNode(self::CHARSET)->defaultValue(self::DEFAULT_CHARSET)->end()
                 ->scalarNode(self::COLLATE)->defaultValue(self::DEFAULT_COLLATE)->end()
             ->end()
